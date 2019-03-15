@@ -9,12 +9,6 @@ let games = [
         title: 'Pacman', // required
         genre: 'Arcade', // required
         releaseYear: 1980 // not required
-    },
-    {
-        id: 2,
-        title: 'Donkey Kong', // required
-        genre: 'Arcade', // required
-        releaseYear: 1981 // not required
     }
 ];
 
@@ -22,4 +16,11 @@ server.get('/', async  (req, res) => {
     res.send('Test!')
 });
 
+server.get('/games', async (req, res) => {
+
+})
+
+server.post('/games', async (req, res) => {
+
+})
 module.exports = server;
