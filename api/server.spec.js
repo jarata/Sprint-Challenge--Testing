@@ -12,10 +12,20 @@ describe('server.js', async () => {
         it('should return 200', async () => {
             const res = await request(server).get('/games');
             expect(res.status).toBe(200);
-        })
+        });
         it('should return an array', async () => {
             const res = await request(server).get('/games');
             expect()
+        });
+        it('should return JSON', async () => {
+            const res = await request(server).get('/games');
+            expect(res.type).toBe('application/json')
+        });
+    })
+    describe('POST /games', async () => {
+        it('should return 422 if fields are incomplete', async () => {
+
         })
+        it('should return 200', async)
     })
 })
