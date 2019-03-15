@@ -17,7 +17,12 @@ server.get('/', async  (req, res) => {
 });
 
 server.get('/games', async (req, res) => {
-
+    try {
+        let game = await games;
+        res.status(200).json(game);
+    } catch (e) {
+        res.status(500).json(e)
+    }
 })
 
 server.post('/games', async (req, res) => {
